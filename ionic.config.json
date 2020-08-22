@@ -1,0 +1,7 @@
+{
+  "name": "write-groups",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
