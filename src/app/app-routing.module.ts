@@ -12,8 +12,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'text-editor',
     pathMatch: 'full'
+  },
+  {
+    path: 'text-editor',
+    loadChildren: () => import('./text-editor/text-editor.module').then( m => m.TextEditorPageModule)
   },
 ];
 
