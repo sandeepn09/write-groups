@@ -12,12 +12,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'text-editor',
+    redirectTo: 'registration',
     pathMatch: 'full'
   },
   {
     path: 'text-editor',
     loadChildren: () => import('./text-editor/text-editor.module').then( m => m.TextEditorPageModule)
+  },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
 ];
 

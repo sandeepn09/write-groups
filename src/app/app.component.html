@@ -1,3 +1,25 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" content-id="main">
+    
+    <ion-content>
+      <div class="menu-header-bg">
+        <ion-label>write up</ion-label>
+      </div>
+      <ion-list class="menu-items" lines="none">
+        <ion-item routerLink="/text-editor">
+          <ion-icon name="pie-chart-outline" slot="start"></ion-icon>Dashboard
+        </ion-item>
+        <ion-item>
+          <ion-icon name="browsers-outline" slot="start"></ion-icon>Challenge
+        </ion-item>
+        <ion-item routerLink="/home">
+          <ion-icon name="reader-outline" slot="start"></ion-icon>My Stories
+        </ion-item>
+        <ion-item>
+          <ion-icon name="settings-outline" slot="start"></ion-icon>Settings
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

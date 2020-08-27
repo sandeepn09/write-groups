@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>text-editor</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ckeditor [editor]="editor" data="Hello, world!"></ckeditor>
+    <ckeditor *ngIf="mode == 'edit'" [editor]="editor" [(ngModel)]="content" data={{data}}></ckeditor>
+    <ion-buttons style="margin-top: 20px;">
+    <ion-button color="medium" fill="outline" *ngIf="mode == 'edit'" (click) ="preview()">Preview</ion-button>
+    <ion-button color="danger" (click) ="saveContent()">Save</ion-button>
+    <ion-button color="medium" *ngIf="mode == 'preview'" (click) ="edit()">Edit</ion-button>
+  </ion-buttons>
+  
+<ion-card *ngIf="mode == 'preview'"> 
+  <ion-card-header>
+    <ion-card-title>Preview</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  <div [innerHTML]="content">
+
+  </div>
+  </ion-card-content>
+</ion-card>
+
 </ion-content>
