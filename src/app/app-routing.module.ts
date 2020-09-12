@@ -23,6 +23,22 @@ const routes: Routes = [
     path: 'registration',
     loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   },
+  {
+    path: 'groups',
+    loadChildren: () => import('./menu-pages/groups/groups.module').then( m => m.GroupsPageModule)
+  },
+  {
+    path: 'stories',
+    loadChildren: () => import('./menu-pages/stories/stories.module').then( m => m.StoriesPageModule)
+  },
+  {
+    path: 'challenge',
+    loadChildren: () => import('./menu-pages/challenge/challenge.module').then( m => m.ChallengePageModule)
+  },
+  {
+    path: 'create-group',
+    loadChildren: () => import('./menu-pages/groups/create-group/create-group.module').then( m => m.CreateGroupPageModule)
+  },
 ];
 
 @NgModule({

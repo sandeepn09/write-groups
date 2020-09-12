@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create-group</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="stage == 1" class="basic-form" lines="none">
+
+    <ion-item >
+      <ion-label position='stacked'>Name</ion-label>
+      <ion-input type="text" placeholder="Enter a name for your group"></ion-input>
+    </ion-item>
+  
+    <ion-item style="margin-bottom: 100px;"> 
+      <ion-label position='stacked'>Description</ion-label>
+      <ion-input type="password" placeholder="Enter a description for your group"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button size="large" color="tertiary" expand="block" (click)="nextStage()">Next</ion-button>
+    </ion-item>
+
+    <ion-item >
+      <ion-button size="large" fill="outline" expand="block" >Cancel</ion-button>
+    </ion-item>
+  
+    
+      
+    
+  
+  </ion-list>
+
+  <ion-list class="basic-form"  *ngIf="stage == 2" lines="none">
+    <ion-list-header>
+      <ion-label>Age Group</ion-label>
+    </ion-list-header>
+    
+
+    <ion-item>
+      <ion-button size="large" fill="outline" shape="round" color="secondary" expand="block" (click)="nextStage()">None</ion-button>
+    </ion-item>
+
+    <ion-item >
+      <ion-button size="large" fill="outline" color="secondary" shape="round" expand="block" (click)="nextStage()">1st to 3rd Grade</ion-button>
+    </ion-item>
+
+    <ion-item >
+      <ion-button size="large" fill="outline" color="secondary" shape="round" expand="block" (click)="nextStage()">4th to 5th Grade</ion-button>
+    </ion-item>
+  
+    <ion-item >
+      <ion-button size="large" fill="outline" color="secondary" shape="round" expand="block" (click)="nextStage()">6th Grade and above</ion-button>
+    </ion-item>
+
+    
+  </ion-list>
+
+  <ion-list class="basic-form"  *ngIf="stage == 3" lines="none">
+    <ion-list-header>
+      <p>Your Group is ready!</p>
+      
+      <p style="display: block; clear: both; margin-left: 20px;">Add members to get going</p>
+    </ion-list-header>
+    
+
+    <ion-item>
+      <ion-button style="margin-top: 50px;" size="large" fill="outline" color="tertiary" expand="block" >Add Members</ion-button>
+    </ion-item>
+
+    
+  </ion-list>
+  
+  
+</ion-content>

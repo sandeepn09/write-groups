@@ -1,0 +1,47 @@
+.basic-form {
+  
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 70px;
+    width: 40%;
+    min-width: 370px;
+
+    ion-item {
+        
+        margin-bottom: 20px;
+        
+    }
+
+    ion-input {
+            height: 100px;
+            line-height: 50px;
+            // max-width: 80% !important;
+            
+            margin-top: 10px;
+            // border: 1px solid red;
+            background-color: #f7f8fa;
+            border-radius: 5px;
+            --padding-start: 10px;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        ion-button {
+            width: 100%;
+        }
+
+        ion-list-header {
+            font-size: 25px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        
+}
+
+.scroll-content{
+    justify-content: center;
+    display: flex!important;
+    align-items: center!important;
+}

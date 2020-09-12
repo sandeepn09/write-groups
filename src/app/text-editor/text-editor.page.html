@@ -10,10 +10,10 @@
 <ion-content>
     <ckeditor *ngIf="mode == 'edit'" [editor]="editor" [(ngModel)]="content" data={{data}}></ckeditor>
     <ion-buttons style="margin-top: 20px;">
-    <ion-button color="medium" fill="outline" *ngIf="mode == 'edit'" (click) ="preview()">Preview</ion-button>
-    <ion-button color="danger" (click) ="saveContent()">Save</ion-button>
-    <ion-button color="medium" *ngIf="mode == 'preview'" (click) ="edit()">Edit</ion-button>
-  </ion-buttons>
+      <ion-button color="medium" fill="outline" *ngIf="mode == 'edit'" (click) ="preview()">Preview</ion-button>
+      <ion-button color="danger" (click) ="saveContent()">Save</ion-button>
+      <ion-button color="medium" *ngIf="mode == 'preview'" (click) ="edit()">Edit</ion-button>
+    </ion-buttons>
   
 <ion-card *ngIf="mode == 'preview'"> 
   <ion-card-header>
